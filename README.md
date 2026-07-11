@@ -1,9 +1,9 @@
 # Bank Customer Churn — Analyse mit SQL & Python
 
 Analyse der Kundenabwanderung ("Churn") bei einer Retail-Bank auf Basis von 10.000 Kundendatensätzen.
-Ziel: die Segmente identifizieren, in denen Kunden am häufigsten kündigen — und daraus eine konkrete Handlungsempfehlung ableiten.
+Ziel: die Segmente identifizieren, in denen Kunden am häufigsten kündigen, und daraus eine konkrete Handlungsempfehlung ableiten.
 
-**Kernergebnis:** Ein klar umrissenes Hochrisiko-Segment (deutsche, inaktive Kunden über 40) kündigt mit **62,2 %** — mehr als das Dreifache des Gesamtdurchschnitts von ~20 %.
+**Kernergebnis:** Ein klar abgegrenztes Hochrisiko-Segment (deutsche, inaktive Kunden über 40) kündigt mit **62,2 %** und damit mehr als das Dreifache des Gesamtdurchschnitts von ~20 %.
 
 ---
 
@@ -41,7 +41,7 @@ Von 10.000 Kunden haben **2.037 gekündigt → 20,4 %**. Das ist die Basislinie,
 | **Deutschland** | 2.509 | 814 | **32,4 %** |
 | Spanien | 2.477 | 413 | 16,7 % |
 
-**Deutschland ist der Problemmarkt: doppelt so hohe Churn-Quote wie Frankreich und Spanien.** Auffällig: Deutschland hat fast dieselbe *absolute* Kündigerzahl wie Frankreich (814 vs. 810) — aber aus nur der halben Kundenbasis. Ohne die Betrachtung der Quote (statt der absoluten Zahl) wäre dieser Effekt unsichtbar geblieben.
+**Deutschland ist das Problem: doppelt so hohe Churn-Quote wie Frankreich und Spanien.** Auffällig: Deutschland hat fast dieselbe absolute Kündigerzahl wie Frankreich (814 vs. 810), aber aus nur der halben Kundenbasis. Ohne die Betrachtung der Quote (statt der absoluten Zahl) wäre dieser Effekt unsichtbar geblieben.
 
 ### 3. Abwanderung nach Alter
 
@@ -66,10 +66,10 @@ Von 10.000 Kunden haben **2.037 gekündigt → 20,4 %**. Das ist die Basislinie,
 | 4 | 60 | 60 | 100,0 % |
 
 **Der Zusammenhang ist nicht linear.** Zwei Produkte sind der Sweet Spot mit der niedrigsten Churn-Quote. Kunden mit 3–4 Produkten wandern jedoch fast vollständig ab. Das deutet auf ein Produkt- oder Beratungsproblem hin (mögliche Ursachen: Overselling, ungeeignete Produktbündel).
-> ⚠️ *Methodischer Hinweis:* Die Gruppen mit 3 und 4 Produkten sind klein (266 bzw. 60 Kunden). Die Quoten sind ein starkes Signal, statistisch aber weniger belastbar als die großen Gruppen — hier wäre eine vertiefte Untersuchung nötig.
+ Hinweis: Die Gruppen mit 3 und 4 Produkten sind klein (266 bzw. 60 Kunden). Die Quoten sind ein starkes Signal, statistisch aber weniger belastbar als die großen Gruppen, hier wäre eine vertieftee Untersuchung nötig.
 
 ### 5. Weitere Treiber
-- **Geschlecht:** Frauen 25,1 % vs. Männer 16,5 % — Frauen kündigen ~1,5-mal häufiger.
+- **Geschlecht:** Frauen 25,1 % vs. Männer 16,5 %:Frauen kündigen ~1,5-mal häufiger.
 - **Kontostand:** Höheres Guthaben geht mit *höherem* Churn einher (kein Guthaben 13,8 % → bis 100k 20,6 % → über 100k 25,2 %). Dieser Effekt überschneidet sich vermutlich mit dem Deutschland-Effekt (dort typischerweise hohe Kontostände) und müsste getrennt betrachtet werden.
 
 ### 6. Hochrisiko-Segment (Kombination der Treiber)
